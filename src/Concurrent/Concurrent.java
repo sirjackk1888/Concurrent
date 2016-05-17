@@ -1,5 +1,8 @@
 /* This program demonstrates a method to create concurrent threads
-/of the same method
+* of the same method
+* 
+* Coded by: Kelly B Ward
+* 05/04/15
 */
 package Concurrent;
 
@@ -11,7 +14,6 @@ class Atomic extends Thread {
             System.out.println("Boom # " + (i+1));
                     //cycles through the iterations, displaying the 
                     //string and count
-            
             try {
                 Thread.sleep(100);
             }catch (InterruptedException e) {
@@ -23,14 +25,11 @@ class Atomic extends Thread {
 }
 
 public class Concurrent {
-
     public static void main(String[] args) {
         Atomic atomic1 = new Atomic();
         atomic1.start();        //starts a new thread of the atomic object
-        
         Atomic atomic2 = new Atomic();
         atomic2.start();        //starts a new thread of the atomic object
     }
-    
 }
 
